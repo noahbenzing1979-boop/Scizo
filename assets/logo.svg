@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title desc">
+  <title id="title">Scizo PRISM Engine Logo</title>
+  <desc id="desc">A glowing PRISM die mark for the Scizo engine.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060812"/>
+      <stop offset="1" stop-color="#061b1b"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="32%" cy="30%" r="58%">
+      <stop offset="0" stop-color="#7df9ff" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#7df9ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="72%" cy="35%" r="54%">
+      <stop offset="0" stop-color="#ff2a6d" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ff2a6d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="720" height="720" fill="url(#bg)"/>
+  <rect width="720" height="720" fill="url(#glowA)"/>
+  <rect width="720" height="720" fill="url(#glowB)"/>
+  <g stroke="#7df9ff" stroke-width="3" opacity="0.3">
+    <path d="M360 700 80 100M360 700 180 65M360 700 300 40M360 700 430 40M360 700 555 70M360 700 660 120"/>
+    <path d="M40 360h640M70 270h580M100 450h520"/>
+  </g>
+  <text x="360" y="148" text-anchor="middle" font-family="Arial Black, Segoe UI, sans-serif" font-size="92" font-weight="900" fill="#ff2a6d" opacity="0.76">SCIZO</text>
+  <text x="352" y="138" text-anchor="middle" font-family="Arial Black, Segoe UI, sans-serif" font-size="92" font-weight="900" fill="#f8f2e8">SCIZO</text>
+  <g transform="translate(360 374) rotate(17)">
+    <polygon points="0,-170 148,-78 114,136 -42,188 -188,56 -162,-132" fill="rgba(255,255,255,0.13)" stroke="#ffcd56" stroke-width="12"/>
+    <path d="M0-170v358M-188 56 148-78" stroke="#ff2a6d" stroke-width="8" opacity="0.72"/>
+    <circle cx="-58" cy="-70" r="19" fill="#7df9ff"/>
+    <circle cx="54" cy="-42" r="19" fill="#7df9ff"/>
+    <circle cx="0" cy="24" r="19" fill="#7df9ff"/>
+    <circle cx="-88" cy="94" r="19" fill="#7df9ff"/>
+    <circle cx="84" cy="100" r="19" fill="#7df9ff"/>
+    <circle cx="4" cy="148" r="19" fill="#7df9ff"/>
+  </g>
+  <text x="360" y="650" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="40" font-weight="900" fill="#ffcd56" letter-spacing="4">PRISM ENGINE</text>
+</svg>

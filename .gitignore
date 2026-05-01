@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.vite/
+.cache/
+
+.env
+.env.*
+*.log
+*.tmp
+
+github_pat*
+*token*
+*secret*
+
+.DS_Store
+Thumbs.db

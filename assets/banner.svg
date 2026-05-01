@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 640" role="img" aria-labelledby="title desc">
+  <title id="title">Scizo PRISMATIC DEPTHS Banner</title>
+  <desc id="desc">A neon dungeon-terminal banner with spectral dice and the PRISMATIC DEPTHS title.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060812"/>
+      <stop offset="0.52" stop-color="#151220"/>
+      <stop offset="1" stop-color="#061b1b"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow" cx="20%" cy="20%" r="55%">
+      <stop offset="0" stop-color="#7df9ff" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#7df9ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="roseGlow" cx="78%" cy="18%" r="50%">
+      <stop offset="0" stop-color="#ff2a6d" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#ff2a6d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="640" fill="url(#bg)"/>
+  <rect width="1600" height="640" fill="url(#cyanGlow)"/>
+  <rect width="1600" height="640" fill="url(#roseGlow)"/>
+  <g opacity="0.28" stroke="#7df9ff" stroke-width="2">
+    <path d="M0 420h1600M0 470h1600M0 520h1600M0 570h1600M0 620h1600"/>
+    <path d="M0 640 520 210M170 640 620 210M340 640 720 210M510 640 820 210M680 640 920 210M850 640 1020 210M1020 640 1120 210M1190 640 1220 210M1360 640 1320 210M1530 640 1420 210"/>
+  </g>
+  <g stroke="#ff2a6d" stroke-width="5" opacity="0.72">
+    <path d="M0 502 520 210h560l520 292" fill="none"/>
+  </g>
+  <g transform="translate(806 354) rotate(17)" filter="url(#softGlow)">
+    <polygon points="0,-142 124,-62 96,112 -34,154 -154,48 -132,-112" fill="rgba(255,255,255,0.12)" stroke="#ffcd56" stroke-width="9"/>
+    <circle cx="-48" cy="-60" r="16" fill="#7df9ff"/>
+    <circle cx="44" cy="-36" r="16" fill="#7df9ff"/>
+    <circle cx="0" cy="20" r="16" fill="#7df9ff"/>
+    <circle cx="-76" cy="78" r="16" fill="#7df9ff"/>
+    <circle cx="70" cy="84" r="16" fill="#7df9ff"/>
+  </g>
+  <text x="130" y="214" font-family="Arial Black, Segoe UI, sans-serif" font-size="84" font-weight="900" fill="#f8f2e8" letter-spacing="2">PRISMATIC DEPTHS</text>
+  <text x="136" y="214" font-family="Arial Black, Segoe UI, sans-serif" font-size="84" font-weight="900" fill="#ff2a6d" opacity="0.72" letter-spacing="2" transform="translate(9 9)">PRISMATIC DEPTHS</text>
+  <text x="136" y="276" font-family="Segoe UI, sans-serif" font-size="32" font-weight="800" fill="#7df9ff" letter-spacing="2">A VIRTUAL DUNGEON CRAWLER FORGED IN THE SCIZO ENGINE</text>
+  <text x="136" y="530" font-family="Segoe UI, sans-serif" font-size="32" font-weight="900" fill="#ffcd56" letter-spacing="2">PRESS YOUR LUCK / SPLIT THE SIGNAL / DESCEND</text>
+</svg>
