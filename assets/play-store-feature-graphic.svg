@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 500" role="img" aria-labelledby="title desc">
+  <title id="title">Prismatic Depths Google Play Feature Graphic</title>
+  <desc id="desc">Centered PRISM die over a neon dungeon grid for the Prismatic Depths game listing.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060812"/>
+      <stop offset="0.55" stop-color="#151220"/>
+      <stop offset="1" stop-color="#061b1b"/>
+    </linearGradient>
+    <radialGradient id="cyan" cx="25%" cy="20%" r="60%">
+      <stop offset="0" stop-color="#7df9ff" stop-opacity="0.36"/>
+      <stop offset="1" stop-color="#7df9ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rose" cx="78%" cy="22%" r="56%">
+      <stop offset="0" stop-color="#ff2a6d" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#ff2a6d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1024" height="500" fill="url(#bg)"/>
+  <rect width="1024" height="500" fill="url(#cyan)"/>
+  <rect width="1024" height="500" fill="url(#rose)"/>
+  <g opacity="0.24" stroke="#7df9ff" stroke-width="2">
+    <path d="M0 330h1024M0 380h1024M0 430h1024M0 480h1024"/>
+    <path d="M60 500 380 180M210 500 450 180M360 500 520 180M510 500 590 180M660 500 660 180M810 500 730 180M960 500 800 180"/>
+  </g>
+  <g transform="translate(512 252) rotate(17)" filter="url(#glow)">
+    <polygon points="0,-132 118,-58 92,108 -34,150 -148,46 -128,-106" fill="rgba(255,255,255,0.14)" stroke="#ffcd56" stroke-width="10"/>
+    <path d="M0-132v282M-148 46 118-58" stroke="#ff2a6d" stroke-width="6" opacity="0.75"/>
+    <circle cx="-42" cy="-54" r="15" fill="#7df9ff"/>
+    <circle cx="42" cy="-34" r="15" fill="#7df9ff"/>
+    <circle cx="0" cy="18" r="15" fill="#7df9ff"/>
+    <circle cx="-70" cy="76" r="15" fill="#7df9ff"/>
+    <circle cx="64" cy="82" r="15" fill="#7df9ff"/>
+  </g>
+  <text x="512" y="94" text-anchor="middle" font-family="Arial Black, Segoe UI, sans-serif" font-size="62" font-weight="900" fill="#f8f2e8">Prismatic Depths</text>
+  <text x="512" y="142" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="24" font-weight="800" fill="#7df9ff" letter-spacing="2">ROLL PRISM DICE • FIGHT • LOOT • DESCEND</text>
+</svg>

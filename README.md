@@ -116,6 +116,18 @@ The current repository includes the first playable browser loop. The next milest
 - The server scaffold lives in `server/` and documents the future combat/state boundary.
 - This project is game fiction and not a medical, psychological, or diagnostic tool.
 
+## Launch Kit
+
+The repo includes a practical marketing kit in `marketing/`:
+
+- Google Play listing copy and A/B test ideas
+- screenshot, trailer, icon, and feature graphic shotlist
+- TikTok and Shorts content calendar
+- influencer outreach templates
+- Discord, Reddit, review, and retention plans
+
+Store-facing SVG source assets are available in `assets/play-store-feature-graphic.svg` and `assets/play-store-icon.svg`.
+
 <div align="center">
 
 Built with 🧠 by noahbenzing1979-boop · Part of the InnovativeAI ecosystem
