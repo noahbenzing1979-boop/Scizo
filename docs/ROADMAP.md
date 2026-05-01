@@ -9,19 +9,19 @@
 
 ## Phase 2: Playable Vertical Slice
 
-- PRISM dice roller
-- One hero class loop
-- Three monster encounters
-- Room reveal flow
-- Loot reward and XP banking
+- PRISM dice roller: shipped in browser
+- Four hero class starts: shipped in browser
+- Monster encounters: shipped as a compact rotating pool
+- Room reveal flow: shipped across three depths
+- Loot reward and XP banking: shipped as the first reward loop
 
 ## Phase 3: Full Depth System
 
-- Four hero classes
 - Thirteen monsters across three tiers
-- Eight room types
 - Thirty-plus loot cards
+- Animated dice and clearer combo celebration
 - Solo and party modes
+- Save slots, run summaries, and unlocks
 
 ## Authorship
 

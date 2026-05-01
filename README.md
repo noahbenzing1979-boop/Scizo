@@ -6,7 +6,7 @@
 
 ### A Virtual Dungeon Crawler Forged in the Scizo Engine
 
-**A neon-drenched dungeon crawler with PRISM dice mechanics, procedural depths, and emergent combat.**  
+**A playable neon-drenched dungeon crawler with PRISM dice mechanics, procedural depths, loot, XP banking, and emergent combat.**  
 Solo or party. Press your luck. Split the signal. Descend.
 
 </div>
@@ -29,6 +29,16 @@ Solo or party. Press your luck. Split the signal. Descend.
 | 3 Depths | Scaling difficulty with XP multipliers |
 | XP Banking | Bank or risk XP to level up strategically |
 | Solo & Party Modes | Play alone or bring a crew |
+
+## Playable Loop
+
+The current build is a compact browser-playable vertical slice:
+
+1. Choose one of four hero classes.
+2. Enter a room and roll your hero's PRISM dice pool.
+3. Keep the roll or press for a new signal.
+4. Resolve damage, guard, focus, combo bonuses, and counterattacks.
+5. Claim loot, bank XP, and push deeper through three depths.
 
 ## Core Mechanics: The PRISM Dice System
 
@@ -97,13 +107,13 @@ pnpm install
 pnpm dev
 ```
 
-The current repository is a polished foundation scaffold. The next milestone is the playable vertical slice: dice rolling, room generation, combat resolution, loot rewards, and party state.
+The current repository includes the first playable browser loop. The next milestone is richer monster behavior, animated dice, more loot cards, and a party mode implementation.
 
 ## Development Notes
 
 - Shared PRISM constants live in `shared/game-data.js`.
-- The client placeholder lives in `client/` and establishes the neon terminal direction.
-- The server placeholder lives in `server/` and documents the future combat/state boundary.
+- The client game lives in `client/` and runs as a lightweight vanilla JS experience.
+- The server scaffold lives in `server/` and documents the future combat/state boundary.
 - This project is game fiction and not a medical, psychological, or diagnostic tool.
 
 <div align="center">

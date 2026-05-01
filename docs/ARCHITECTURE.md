@@ -21,4 +21,4 @@ PRISM dice are color-coded signal faces. Each face should eventually carry both 
 
 ## Scaffold Status
 
-This repo is intentionally a foundation. The current code establishes data shape, project boundaries, README identity, and a minimal Vite landing page. The playable engine comes next.
+The current browser build is a compact playable vertical slice. The client owns the temporary local game loop today; the server boundary remains available for future multiplayer, deterministic run validation, and richer procedural generation.

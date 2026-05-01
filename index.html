@@ -3,68 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="PRISMATIC DEPTHS, a neon dungeon crawler forged in the Scizo Engine." />
+    <meta name="description" content="PRISMATIC DEPTHS, a playable neon dungeon crawler forged in the Scizo Engine." />
     <title>Scizo | Prismatic Depths</title>
   </head>
   <body>
-    <main class="shell">
-      <section class="hero">
-        <div class="hero__copy">
-          <p class="eyebrow">Scizo Engine / PRISMATIC DEPTHS</p>
-          <h1>Press your luck. Split the signal. Descend.</h1>
-          <p>
-            A neon dungeon crawler about delicious risk, readable decisions, and that perfect
-            little pause before you press the roll one more time.
-          </p>
-          <div class="actions" aria-label="Primary fantasy">
-            <a href="#systems">View Systems</a>
-            <a href="#depths">Enter Depths</a>
-          </div>
-        </div>
-        <div class="relic" aria-hidden="true">
-          <div class="relic__die">
-            <span></span><span></span><span></span><span></span><span></span><span></span>
-          </div>
-          <div class="relic__ring relic__ring--one"></div>
-          <div class="relic__ring relic__ring--two"></div>
-        </div>
-      </section>
-
-      <section id="systems" class="grid" aria-label="Core systems">
-        <article>
-          <span>01</span>
-          <h2>PRISM Dice</h2>
-          <p>Roll, keep, press, resolve, and chase combo bonuses when the signal starts to sing.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h2>Procedural Depths</h2>
-          <p>Eight room types and three depth bands make each descent feel legible, dangerous, and alive.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h2>Loot Cards</h2>
-          <p>Weapons, armor, artifacts, and consumables arrive as bright little promises with teeth.</p>
-        </article>
-      </section>
-
-      <section id="depths" class="tableau" aria-label="Dungeon preview">
-        <div>
-          <p class="eyebrow">Dungeon Mood</p>
-          <h2>Readable danger, not visual noise.</h2>
-          <p>
-            The first visual direction favors high contrast, generous spacing, fast scanning, and
-            reward moments that feel crisp. Every future roll, card, monster, and room should tell
-            the player what matters before it asks them to decide.
-          </p>
-        </div>
-        <div class="depth-stack" aria-hidden="true">
-          <div>Depth I <strong>Learn the rhythm</strong></div>
-          <div>Depth II <strong>Press the signal</strong></div>
-          <div>Depth III <strong>Face the guardian</strong></div>
-        </div>
-      </section>
-    </main>
+    <main id="app" class="shell"></main>
     <script type="module" src="/client/main.js"></script>
   </body>
 </html>
