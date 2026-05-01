@@ -1,6 +1,6 @@
 // ============================================================
 // PRISMATIC DEPTHS — MonsterCard Component
-// Design: Neon Dungeon Terminal — monster stat blocks
+// Design: Neon Dungeon Terminal — monster stat blocks with images
 // ============================================================
 
 import { Monster } from '@/lib/gameEngine';
@@ -29,6 +29,14 @@ const MONSTER_ICONS: Record<string, string> = {
   'Lich King': '💀',
 };
 
+const MONSTER_IMAGES: Record<string, string> = {
+  'Cultist': '/manus-storage/monster-cultist_aabc3733.png',
+  'Giant Spider': '/manus-storage/monster-spider_5f546013.png',
+  'Wraith': '/manus-storage/monster-wraith_dfc15a79.png',
+  'Dragon Wyrmling': '/manus-storage/monster-dragon_15a83706.png',
+  'Lich King': '/manus-storage/monster-lich_32b3bdb2.png',
+};
+
 interface MonsterCardProps {
   monster: Monster;
   isActive?: boolean;
@@ -54,6 +62,7 @@ export default function MonsterCard({ monster, isActive, compact, onClick, selec
   const hpPct = (monster.hp / monster.maxHp) * 100;
   const hpColor = hpPct > 60 ? '#f87171' : hpPct > 25 ? '#fbbf24' : '#4ade80';
   const icon = MONSTER_ICONS[monster.name] || '👾';
+  const monsterImage = MONSTER_IMAGES[monster.name];
 
   if (compact) {
     return (
@@ -97,7 +106,7 @@ export default function MonsterCard({ monster, isActive, compact, onClick, selec
     <div
       onClick={onClick}
       className={cn(
-        'relative rounded border p-3 transition-all duration-300',
+        'relative rounded border p-3 transition-all duration-300 overflow-hidden',
         selected && 'scale-[1.02]',
         monster.hp <= 0 && 'opacity-30',
         onClick && monster.hp > 0 && 'cursor-pointer hover:scale-[1.02]',
@@ -108,6 +117,13 @@ export default function MonsterCard({ monster, isActive, compact, onClick, selec
         boxShadow: selected ? `0 0 16px ${colors.glow}` : 'none',
       }}
     >
+      {/* Monster image background */}
+      {monsterImage && (
+        <div className="absolute inset-0 opacity-20 pointer-events-none">
+          <img src={monsterImage} alt={monster.name} className="w-full h-full object-cover" />
+        </div>
+      )}
+
       {monster.hp <= 0 && (
         <div className="absolute inset-0 flex items-center justify-center z-10 bg-black/60 rounded">
           <span className="text-green-400 font-bold">DEFEATED</span>
@@ -115,7 +131,7 @@ export default function MonsterCard({ monster, isActive, compact, onClick, selec
       )}
 
       {/* Header */}
-      <div className="flex items-center gap-2 mb-2">
+      <div className="relative z-10 flex items-center gap-2 mb-2">
         <span className="text-2xl">{icon}</span>
         <div className="flex-1">
           <div className="font-bold text-sm" style={{ color: colors.primary }}>{monster.name}</div>
@@ -134,10 +150,12 @@ export default function MonsterCard({ monster, isActive, compact, onClick, selec
       </div>
 
       {/* HP Bar */}
-      <HPBar hp={monster.hp} maxHp={monster.maxHp} color={hpColor} />
+      <div className="relative z-10">
+        <HPBar hp={monster.hp} maxHp={monster.maxHp} color={hpColor} />
+      </div>
 
       {/* Attack dice */}
-      <div className="flex items-center gap-2 mt-2">
+      <div className="relative z-10 flex items-center gap-2 mt-2">
         <span className="text-xs text-muted-foreground">ATK:</span>
         <div className="flex gap-1">
           {monster.attackDice.map((d, i) => <DieBadge key={i} die={d} size="sm" />)}
@@ -145,7 +163,7 @@ export default function MonsterCard({ monster, isActive, compact, onClick, selec
       </div>
 
       {/* Special ability */}
-      <div className="mt-2 text-xs rounded p-1.5" style={{ background: 'rgba(255,255,255,0.03)', borderLeft: `2px solid ${colors.primary}40` }}>
+      <div className="relative z-10 mt-2 text-xs rounded p-1.5" style={{ background: 'rgba(255,255,255,0.03)', borderLeft: `2px solid ${colors.primary}40` }}>
         <span className="text-muted-foreground">{monster.special}</span>
       </div>
     </div>

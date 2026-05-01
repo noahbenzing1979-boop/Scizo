@@ -7,6 +7,7 @@ import { useState, useCallback } from 'react';
 import { useGame } from '@/contexts/GameContext';
 import { DieType, DieRoll, rollDice, checkComboBonuses, DIE_CONFIG } from '@/lib/gameEngine';
 import DiceRoller, { DieSelector } from './DiceRoller';
+import DiceRollAnimation from './DiceRollAnimation';
 import MonsterCard from './MonsterCard';
 import HeroCard from './HeroCard';
 import { cn } from '@/lib/utils';
@@ -191,6 +192,13 @@ export default function CombatPanel() {
               onClick={handleNextTurn}
             />
           </div>
+
+          {/* Dice roll animation */}
+          {lastRolls.length > 0 && isAnimating && (
+            <div className="rounded border p-3" style={{ background: 'rgba(6,182,212,0.08)', borderColor: 'rgba(6,182,212,0.3)' }}>
+              <DiceRollAnimation rolls={lastRolls} isRolling={isAnimating} />
+            </div>
+          )}
 
           {/* Attack panel */}
           {combatAction === 'attack' && (
