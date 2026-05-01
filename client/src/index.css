@@ -1,0 +1,330 @@
+/* ============================================================
+   PRISMATIC DEPTHS — Global Styles
+   Design: Neon Dungeon Terminal
+   Philosophy: Dark near-black base, prismatic neon accents,
+   each die type glows in its own spectral color.
+   Typography: Cinzel Decorative (display) + Space Grotesk (body) + JetBrains Mono (data)
+   ============================================================ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* ─── DARK DUNGEON THEME ─────────────────────────────────── */
+:root {
+  --radius: 0.375rem;
+
+  /* Neon Dungeon Terminal — always dark */
+  --background: oklch(0.07 0.01 270);
+  --foreground: oklch(0.92 0.005 220);
+  --card: oklch(0.10 0.01 270);
+  --card-foreground: oklch(0.92 0.005 220);
+  --popover: oklch(0.10 0.01 270);
+  --popover-foreground: oklch(0.92 0.005 220);
+
+  /* Cyan primary — the dungeon's signature color */
+  --primary: oklch(0.72 0.18 195);
+  --primary-foreground: oklch(0.07 0.01 270);
+
+  --secondary: oklch(0.13 0.01 270);
+  --secondary-foreground: oklch(0.75 0.01 220);
+
+  --muted: oklch(0.13 0.01 270);
+  --muted-foreground: oklch(0.52 0.01 270);
+
+  --accent: oklch(0.15 0.02 270);
+  --accent-foreground: oklch(0.92 0.005 220);
+
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 10%);
+  --ring: oklch(0.72 0.18 195);
+
+  /* Charts — prismatic die colors */
+  --chart-1: oklch(0.72 0.18 195);  /* cyan D8 */
+  --chart-2: oklch(0.65 0.22 270);  /* violet D4 */
+  --chart-3: oklch(0.72 0.18 145);  /* green D10 */
+  --chart-4: oklch(0.78 0.18 80);   /* amber D12 */
+  --chart-5: oklch(0.65 0.22 25);   /* crimson D20 */
+
+  --sidebar: oklch(0.10 0.01 270);
+  --sidebar-foreground: oklch(0.92 0.005 220);
+  --sidebar-primary: oklch(0.72 0.18 195);
+  --sidebar-primary-foreground: oklch(0.07 0.01 270);
+  --sidebar-accent: oklch(0.13 0.01 270);
+  --sidebar-accent-foreground: oklch(0.92 0.005 220);
+  --sidebar-border: oklch(1 0 0 / 8%);
+  --sidebar-ring: oklch(0.72 0.18 195);
+}
+
+/* Dark mode = same as root (always dark) */
+.dark {
+  --background: oklch(0.07 0.01 270);
+  --foreground: oklch(0.92 0.005 220);
+  --card: oklch(0.10 0.01 270);
+  --card-foreground: oklch(0.92 0.005 220);
+  --popover: oklch(0.10 0.01 270);
+  --popover-foreground: oklch(0.92 0.005 220);
+  --primary: oklch(0.72 0.18 195);
+  --primary-foreground: oklch(0.07 0.01 270);
+  --secondary: oklch(0.13 0.01 270);
+  --secondary-foreground: oklch(0.75 0.01 220);
+  --muted: oklch(0.13 0.01 270);
+  --muted-foreground: oklch(0.52 0.01 270);
+  --accent: oklch(0.15 0.02 270);
+  --accent-foreground: oklch(0.92 0.005 220);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 10%);
+  --ring: oklch(0.72 0.18 195);
+  --sidebar: oklch(0.10 0.01 270);
+  --sidebar-foreground: oklch(0.92 0.005 220);
+  --sidebar-primary: oklch(0.72 0.18 195);
+  --sidebar-primary-foreground: oklch(0.07 0.01 270);
+  --sidebar-accent: oklch(0.13 0.01 270);
+  --sidebar-accent-foreground: oklch(0.92 0.005 220);
+  --sidebar-border: oklch(1 0 0 / 8%);
+  --sidebar-ring: oklch(0.72 0.18 195);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1440px;
+    }
+  }
+}
+
+/* ─── FONT CLASSES ────────────────────────────────────────── */
+.font-display {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ─── NEON GLOW UTILITIES ─────────────────────────────────── */
+.neon-cyan   { color: #22d3ee; text-shadow: 0 0 8px rgba(6,182,212,0.6); }
+.neon-violet { color: #c084fc; text-shadow: 0 0 8px rgba(168,85,247,0.6); }
+.neon-blue   { color: #60a5fa; text-shadow: 0 0 8px rgba(59,130,246,0.6); }
+.neon-green  { color: #4ade80; text-shadow: 0 0 8px rgba(34,197,94,0.6); }
+.neon-amber  { color: #fbbf24; text-shadow: 0 0 8px rgba(245,158,11,0.6); }
+.neon-crimson{ color: #f87171; text-shadow: 0 0 8px rgba(239,68,68,0.6); }
+
+/* ─── DIE ROLLING ANIMATION ──────────────────────────────── */
+@keyframes dieRoll {
+  0%   { transform: rotate(0deg) scale(1); }
+  20%  { transform: rotate(15deg) scale(1.1); }
+  40%  { transform: rotate(-10deg) scale(0.95); }
+  60%  { transform: rotate(8deg) scale(1.05); }
+  80%  { transform: rotate(-4deg) scale(1.02); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.die-rolling {
+  animation: dieRoll 0.6s ease-out;
+}
+
+/* ─── PRISM GLITCH EFFECT ─────────────────────────────────── */
+@keyframes prismGlitch {
+  0%   { filter: none; transform: none; }
+  10%  { filter: hue-rotate(90deg) saturate(2); transform: translateX(-2px); }
+  20%  { filter: hue-rotate(180deg) saturate(3); transform: translateX(2px); }
+  30%  { filter: hue-rotate(270deg) saturate(2); transform: translateX(-1px); }
+  40%  { filter: none; transform: none; }
+  50%  { filter: brightness(2); transform: scale(1.01); }
+  60%  { filter: none; transform: none; }
+  100% { filter: none; transform: none; }
+}
+
+.prism-glitch {
+  animation: prismGlitch 0.8s ease-out;
+}
+
+/* ─── COMBO FLASH ─────────────────────────────────────────── */
+@keyframes comboFlash {
+  0%   { opacity: 1; }
+  25%  { opacity: 0.3; }
+  50%  { opacity: 1; }
+  75%  { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.combo-flash {
+  animation: comboFlash 0.4s ease-out;
+}
+
+/* ─── ENTRANCE ANIMATION ──────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* ─── SCANLINE OVERLAY ────────────────────────────────────── */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.04) 2px,
+    rgba(0, 0, 0, 0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── CUSTOM SCROLLBAR ────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.5);
+}
+
+/* ─── HP BAR PULSE (LOW HP) ───────────────────────────────── */
+@keyframes hpPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+.hp-critical {
+  animation: hpPulse 1s ease-in-out infinite;
+}
+
+/* ─── PRISMATIC TITLE SHIMMER ─────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.prismatic-text {
+  background: linear-gradient(
+    135deg,
+    #a855f7 0%,
+    #3b82f6 16%,
+    #06b6d4 33%,
+    #22c55e 50%,
+    #f59e0b 66%,
+    #ef4444 83%,
+    #a855f7 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s ease infinite;
+}
+
+/* ─── DEPTH INDICATOR PULSE ───────────────────────────────── */
+@keyframes depthPulse {
+  0%, 100% { box-shadow: 0 0 8px currentColor; }
+  50%       { box-shadow: 0 0 20px currentColor; }
+}
+
+.depth-pulse {
+  animation: depthPulse 2s ease-in-out infinite;
+}
